@@ -54,4 +54,4 @@ if genre == 'Milan':
 elif weather == 'Bolzano':
      st.write(weatherData)
 else:
-     st.write(weatherData
+     st.write(weatherData)

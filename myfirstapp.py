@@ -12,17 +12,17 @@ else:
      
 import json, requests 
 
-APIkey = '629e7883de074fc948b601e927640e29'
-location = 'london'
+#APIkey = '629e7883de074fc948b601e927640e29'
+#location = 'london'
 
-url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
+#url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 
 
-response = requests.get(url)   
+#response = requests.get(url)   
 
-weatherData = json.loads(response.text)
+#weatherData = json.loads(response.text)
 
-st.header(weatherData['main']['temp_max']) 
+#st.header(weatherData['main']['temp_max']) 
 #---------------------------------------------
 import json, requests 
 #from pprint import pprint

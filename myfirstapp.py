@@ -22,5 +22,5 @@ response = requests.get(url)
 
 weatherData = json.loads(response.text)
 
-print(weatherData['main']['temp_max']) 
+st.header(weatherData['main']['temp_max']) 
 

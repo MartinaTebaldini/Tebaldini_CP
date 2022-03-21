@@ -49,7 +49,7 @@ weatherData = json.loads(response.text)
 #-----------------------
 
 weather = st.radio("Choose one of the following citys",('Milan', 'Bolzano', 'Palermo'), help = "clik one of the three options")
-if genre == 'Milan':
+if weather == 'Milan':
      st.text(str(weatherData))
 elif weather == 'Bolzano':
      st.write(weatherData)

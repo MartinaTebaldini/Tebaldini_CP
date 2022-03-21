@@ -41,6 +41,6 @@ response = requests.get(url)
 #Load JSON data into a Python variable.
 weatherData = json.loads(response.text)
 # Uncomment to see the raw JSON text:
-print(weatherData) 
+st.text(weatherData) 
 
-pprint(weatherData)
+#pprint(weatherData)

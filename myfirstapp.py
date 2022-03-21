@@ -28,7 +28,8 @@ import json, requests
 #from pprint import pprint
 
 APIkey = '629e7883de074fc948b601e927640e29'
-location = st.text_input("give me a city name ")
+#location = st.text_input("give me a city name ")
+location = st.text_input("give me a city name between milan, bolzano and palermo")
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 
@@ -41,6 +42,16 @@ response = requests.get(url)
 #Load JSON data into a Python variable.
 weatherData = json.loads(response.text)
 # Uncomment to see the raw JSON text:
-st.text(str(weatherData))
+#st.text(str(weatherData))
 
 #pprint(weatherData)
+
+#-----------------------
+
+weather = st.radio("Choose one of the following citys",('Milan', 'Bolzano', 'Palermo'), help = "clik one of the three options")
+if genre == 'Milan':
+     st.text(str(weatherData))
+elif weather == 'Bolzano':
+     st.write(weatherData)
+else:
+     st.write(weatherData

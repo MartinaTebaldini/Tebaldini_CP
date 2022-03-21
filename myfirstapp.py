@@ -28,7 +28,7 @@ import json, requests
 #from pprint import pprint
 
 APIkey = '629e7883de074fc948b601e927640e29'
-location = input("give me a city name ")
+location = st.text_input("give me a city name ")
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 

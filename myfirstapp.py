@@ -4,7 +4,7 @@ st.text("from Brixen")
 title = st.text_input('Gimme a movie title', 'enter a movie title here',  max_chars= 10)
 st.write('The current movie title is', title)
 
-genre = st.radio("What's your favorite movie genre",('Comedy', 'Drama', 'Documentary'))
+genre = st.radio("What's your favorite movie genre",('Comedy', 'Drama', 'Documentary'), help = "clik one of the three options")
 if genre == 'Comedy':
      st.write('You selected comedy.')
 else:

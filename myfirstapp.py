@@ -25,7 +25,7 @@ weatherData = json.loads(response.text)
 st.header(weatherData['main']['temp_max']) 
 #---------------------------------------------
 import json, requests 
-from pprint import pprint
+#from pprint import pprint
 
 APIkey = '629e7883de074fc948b601e927640e29'
 location = input("give me a city name ")

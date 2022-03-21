@@ -33,6 +33,11 @@ APIkey = '629e7883de074fc948b601e927640e29'
 location = st.radio("Choose one of the following citys",('Milan', 'Bolzano', 'Palermo'), help = "clik one of the three options")
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 
+col1, col2, col3 = st.columns(3)
+col1.metric("temperature", weatherData[main][temp])
+col2.metric("Wind", weatherData[wind][speed])
+col3.metric("Humidity", weatherData[main][humidity])
+
 # Download the JSON data from OpenWeatherMap.org's API.
 response = requests.get(url)  
 # Uncomment to see the raw JSON text:

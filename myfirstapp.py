@@ -29,7 +29,8 @@ import json, requests
 
 APIkey = '629e7883de074fc948b601e927640e29'
 #location = st.text_input("give me a city name ")
-location = st.text_input("give me a city name between milan, bolzano and palermo")
+location = st.radio("Choose one of the following citys",('Milan', 'Bolzano', 'Palermo'), help = "clik one of the three options")
+#st.text_input("give me a city name between milan, bolzano and palermo")
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 

@@ -10,7 +10,7 @@ st.write('You selected:', option)
 
 
 if option == "synonims":
-  Url = 'https://api.datamuse.com/words?rel_syn='+ keyword + '&max=4'
+  url = 'https://api.datamuse.com/words?rel_syn='+ keyword + '&max=4'
 elif option == "meaning":
   url = 'https://api.datamuse.com/words?ml='+ keyword + '&max=4'
 else:

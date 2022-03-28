@@ -1,6 +1,7 @@
 import streamlit as st
 import json, requests 
 from pprint import pprint
+
 keyword=st.text_input('plz give me a keyword')
 
 
@@ -9,11 +10,11 @@ st.write('You selected:', option)
 
 
 if option == "synonims":
-  st.write('https://api.datamuse.com/words?rel_syn='+ keyword + '&max=4')
+  Url = 'https://api.datamuse.com/words?rel_syn='+ keyword + '&max=4'
 elif option == "meaning":
-  st.write('https://api.datamuse.com/words?ml='+ keyword + '&max=4')
+  url = 'https://api.datamuse.com/words?ml='+ keyword + '&max=4'
 else:
-  st.write('https://api.datamuse.com/words?rel_ant='+ keyword + '&max=4')
+  url = 'https://api.datamuse.com/words?rel_ant='+ keyword + '&max=4'
   
 response = requests.get(url)   
 

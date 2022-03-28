@@ -17,6 +17,11 @@ if option == "synonims":
   st.text(synonims)
 else:
   st.text(antonyms)
+  
+#response1 = requests.get(url)
+#response2 = requests.get(url2)
+#dataFromDatamuse1 = json.loads(response1.text)
+#dataFromDatamuse2 = json.loads(response2.text)
 
 
 

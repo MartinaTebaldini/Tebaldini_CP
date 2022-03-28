@@ -8,15 +8,15 @@ option = st.selectbox('What would you like to know about this word?', ('synonims
 st.write('You selected:', option)
 
 
-response1 = requests.get(synonims)
-response2 = requests.get(antonyms)
-dataFromDatamuse1 = json.loads(response1.text)
-dataFromDatamuse2 = json.loads(response2.text)
+#response1 = requests.get(synonims)
+#response2 = requests.get(antonyms)
+#dataFromDatamuse1 = json.loads(response1.text)
+#dataFromDatamuse2 = json.loads(response2.text)
 
-if option == synonims:
-  print(dataFromDatamuse1)
+if option == "synonims":
+  st.text(synonims)
 else:
-  print(dataFromDatamuse2)
+  st.text(antonyms)
 
 
 

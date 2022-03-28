@@ -18,5 +18,6 @@ else:
   
 response = requests.get(url)   
 dataFromDatamuse = json.loads(response.text) 
-pprint(dataFromDatamuse[0:10])
   
+for eachentry in dataFromDatamuse:
+  print(eachentry['word'])

@@ -1,4 +1,5 @@
 import streamlit as st
+import json, requests 
 keyword=st.text_input('plz give me a keyword')
 
 synonims = 'https://api.datamuse.com/words?rel_syn='+ keyword + '&max=4'

@@ -22,12 +22,3 @@ response = requests.get(url)
 dataFromDatamuse = json.loads(response.text) 
 pprint(dataFromDatamuse[0:10]
   
-
-
-
-
-
-#st.header("hello world")  
-#st.text("from Brixen")
-
-#st.write('The current movie title is', title)

@@ -18,11 +18,11 @@ dataFromDatamuse2 = json.loads(response2.text)
 dataFromDatamuse3 = json.loads(response3.text)
 
 if option == "synonims":
-  st.write(dataFromDatamuse1)
+  st.write(dataFromDatamuse1['word'])
 elif option == "meaning":
-  st.write(dataFromDatamuse2)
+  st.write(dataFromDatamuse2['word'])
 else:
-  st.write(dataFromDatamuse3)
+  st.write(dataFromDatamuse3['word'])
   
 
 

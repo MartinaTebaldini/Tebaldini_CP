@@ -20,4 +20,4 @@ response = requests.get(url)
 dataFromDatamuse = json.loads(response.text) 
   
 for eachentry in dataFromDatamuse:
-  print(eachentry['word'])
+  st.write(eachentry['word'])

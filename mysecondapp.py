@@ -17,8 +17,6 @@ else:
   url = 'https://api.datamuse.com/words?rel_ant='+ keyword + '&max=4'
   
 response = requests.get(url)   
-
-
 dataFromDatamuse = json.loads(response.text) 
-pprint(dataFromDatamuse[0:10])
+pprint(dataFromDatamuse[0:10)
   

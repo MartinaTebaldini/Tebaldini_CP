@@ -18,6 +18,6 @@ else:
   
 response = requests.get(url)   
 dataFromDatamuse = json.loads(response.text) 
-  
-for eachentry in dataFromDatamuse:
-  st.write(eachentry['word'])
+st.write(dataFromDatamuse)
+#for eachentry in dataFromDatamuse:
+  #st.write(eachentry['word'])

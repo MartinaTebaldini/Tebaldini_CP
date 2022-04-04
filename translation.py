@@ -1,5 +1,5 @@
 import streamlit as st
-#import json,requests
+import json,requests
 from googletrans import Translator
 #import json, requests 
 #from pprint import pprint

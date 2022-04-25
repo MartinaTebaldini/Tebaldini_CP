@@ -12,10 +12,10 @@ dataFromWikipedia = json.loads(response.text)
 st.write(dataFromWikipedia["query"]["search"][0]["snippet"]) 
 # Uncomment to see a better readable JSON text:
 #pprint(dataFromWikipedia) #dont forget to import the correct library to make this work
-#textwithHTMLtags = dataFromWikipedia["query"]["search"][0]["snippet"]
-#from bs4 import BeautifulSoup
-#soup = BeautifulSoup(textwithHTMLtags)
+textwithHTMLtags = dataFromWikipedia
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(textwithHTMLtags)
 
  
-#textwithoutHTMLtags = soup.get_text()
-#st.write(textwithoutHTMLtags)
+textwithoutHTMLtags = soup.get_text()
+st.write(textwithoutHTMLtags)

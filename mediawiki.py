@@ -1,5 +1,4 @@
 import streamlit as st
-
 import json, requests 
 from pprint import pprint
 keyword = True
@@ -19,4 +18,4 @@ while keyword != "nothing":
 
  
   textwithoutHTMLtags = soup.get_text()
-  print(textwithoutHTMLtags)
+  st.write(textwithoutHTMLtags)

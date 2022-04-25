@@ -9,7 +9,7 @@ st.write(url)
 response = requests.get(url) 
 dataFromWikipedia = json.loads(response.text)
 # Uncomment to see the raw JSON text:
-st.write(dataFromWikipedia) 
+st.write(dataFromWikipedia["query"]["search"][0]["snippet"]) 
 # Uncomment to see a better readable JSON text:
 #pprint(dataFromWikipedia) #dont forget to import the correct library to make this work
 #textwithHTMLtags = dataFromWikipedia["query"]["search"][0]["snippet"]

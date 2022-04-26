@@ -12,7 +12,8 @@ if text_user != "":
  translator = Translator()
  if tar_lang != "":
   tra_text = translator.translate(text_user, dest = tar_lang)
-  st.write(tra_text.pronunciation)
+  st.write(tra_text.text)
+  st.write("here is the pronunciation!", tra_text.pronunciation)
   tts1=gTTS(tra_text.text, tar_lang)
   tts1.save("lang.mp3")
 #ipd.display(ipd.Audio("lang.mp3")

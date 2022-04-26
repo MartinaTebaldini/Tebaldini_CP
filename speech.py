@@ -5,7 +5,7 @@ from gtts import gTTS
 
 st.header("here is your translation and its pronunciation!")
 
-text_user = st.text_input("give a me text to translate ")
+text_user = st.text_input("give me a text to translate ")
 
 if text_user != "":
  tar_lang = st.selectbox("choose one of the following languages", ("it", "de", "se", "hr", "et", "en", "hu"))

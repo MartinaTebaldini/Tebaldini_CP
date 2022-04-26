@@ -2,8 +2,8 @@ from googletrans import Translator
 import streamlit as st
 st.header("here is your translation and its pronunciation!")
 
-text_user = st.input("give a me text to translate ")
-tar_lang = st.input("give me a target language ")
+text_user = st.text_input("give a me text to translate ")
+tar_lang = st.text_input("give me a target language ")
 
 langaugeis = translator.translate(text_user, dest = tar_lang)
 

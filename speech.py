@@ -5,7 +5,7 @@ from gtts import gTTS
 
 st.header("here is your translation and its pronunciation!")
 
-text_user = st.text_input("give a me text to translate ", " ")
+text_user = st.text_input("give a me text to translate ")
 
 if text_user == " ":
  tar_lang = st.text_input("give me a target language ")

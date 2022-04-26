@@ -1,5 +1,7 @@
 from googletrans import Translator
 import streamlit as st
+from gtts import gTTS
+ 
 translator = Translator()
 st.header("here is your translation and its pronunciation!")
 

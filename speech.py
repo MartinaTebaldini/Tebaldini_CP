@@ -8,12 +8,12 @@ st.header("here is your translation and its pronunciation!")
 text_user = st.text_input("give me a text to translate ")
 
 if text_user != "":
- tar_lang = st.selectbox("choose one of the following languages", ("it", "de", "se", "hr", "et", "en", "hu"))
+ #tar_lang = st.selectbox("choose one of the following languages", ("it", "de", "se", "hr", "et", "en", "hu"))
  st.write("here is a link with the language codes")
  url = "https://cloud.google.com/translate/docs/languages"
  st.write(url)
  #if you dont want the selectbox write simply as follows:
- #tar_lang = st.text_input("in which language do you want to translate the text?")
+ tar_lang = st.text_input("in which language do you want to translate the text?")
  st.write("you selected", tar_lang)
  translator = Translator()
  if tar_lang != "":

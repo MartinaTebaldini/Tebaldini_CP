@@ -1,7 +1,9 @@
 import streamlit as st
 from googletrans import Translator
 from gtts import gTTS
- 
+
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
 
 st.header("here is your translation and its pronunciation!")
 

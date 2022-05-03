@@ -1,7 +1,7 @@
 import streamlit as st
 from googletrans import Translator
 from gtts import gTTS
-[theme]
+
 primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 

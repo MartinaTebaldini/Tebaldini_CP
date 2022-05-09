@@ -2,7 +2,7 @@
 import streamlit as st
 from PIL import Image
 from googletrans import Translator
-#from gtts import GTTS
+#from gtts import gTTS
 
 import pytesseract
 import shutil
@@ -13,14 +13,21 @@ import random
     
 
 uploaded_file = st.file_uploader("Please upload an Image file")
-extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file)) #????????
+extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file)) #???????? how can i call the uploaded file in a general way?
 st.write(extractedInformation)
 
 translator = Translator()
 detectedLanguage = translator.detect(extractedInformation)
-st.write(detectedLanguage)
+st.write(detectedLanguage) #to detect the language of the image
 
-tar_language = st.text_input("give me your target language ")
-text_to_translate = (extractedInformation)
-langaugeis = translator.translate(text_to_translate, dest = tar_language)
-st.write(langaugeis.text)
+st.write("here is a link with the language codes")
+url = "https://cloud.google.com/translate/docs/languages"
+st.write(url)
+tar_lang = st.text_input("in which language do you want to translate the text?")
+st.write("you selected", tar_lang)
+
+if tar_lang != "":
+    tra_text = translator.translate(extractedInformation, dest = tar_lang)
+    st.write(tra_text.text)
+
+

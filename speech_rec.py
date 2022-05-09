@@ -1,5 +1,5 @@
 
-import speech_recognition as sr
+import Speech_Recognition as sr
 import streamlit as st
 
 r = sr.Recognizer()

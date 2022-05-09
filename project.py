@@ -9,11 +9,11 @@ import shutil
 import os
 import random
 
-
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
 
 uploaded_file = st.file_uploader("Please upload an Image file")
 if uploaded_file is not None:
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
+    
     extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file)) #???????? how can i call the uploaded file in a general way?
     st.write(extractedInformation)
 

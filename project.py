@@ -11,9 +11,9 @@ import random
 
 
     
-pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
+
 uploaded_file = st.file_uploader("Please upload an Image file")
-extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file))
+extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file)) #????????
 st.write(extractedInformation)
 
 translator = Translator()

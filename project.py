@@ -1,3 +1,6 @@
+$ pip install pillow
+$ pip install pytesseract
+
 import streamlit as st
 from PIL import Image
 from googletrans import Translator

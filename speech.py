@@ -2,7 +2,7 @@ import streamlit as st
 from googletrans import Translator
 from gtts import gTTS
 
-
+st.image(https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/blob/main/rs7352_thinkstockphotos-493800479-low.jpg)
 
 st.header("here is your translation and its pronunciation!")
 

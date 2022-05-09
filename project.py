@@ -1,6 +1,6 @@
 import streamlit as st
 from googletrans import Translator
-from gtts import GTTS
+#from gtts import GTTS
 
 import pytesseract
 import shutil

@@ -1,5 +1,5 @@
 
-import Speech_Recognition as sr
+import speech_recognition as sr
 import streamlit as st
 import requests
 

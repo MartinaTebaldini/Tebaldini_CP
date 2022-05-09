@@ -1,5 +1,5 @@
-$ pip install pillow
-$ pip install pytesseract
+!pip install pillow
+!pip install pytesseract
 
 import streamlit as st
 from PIL import Image

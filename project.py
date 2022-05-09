@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 from googletrans import Translator
 #from gtts import GTTS
 
@@ -6,10 +7,7 @@ import pytesseract
 import shutil
 import os
 import random
-try:
-    from PIL import Image
-except ImportError:
-    import Image
+
 
     
 pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'

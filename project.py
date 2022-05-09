@@ -9,7 +9,7 @@ import shutil
 import os
 import random
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
+
 
 uploaded_file = st.file_uploader("Please upload an Image file")
 if uploaded_file is not None:

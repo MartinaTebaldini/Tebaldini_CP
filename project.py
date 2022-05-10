@@ -10,7 +10,7 @@ import os
 import random
 
 
-st.head("import an image and i will translate it for you!")
+st.header("import an image and i will translate it for you!")
 uploaded_file = st.file_uploader("Please upload an Image file")
 if uploaded_file is not None:
     

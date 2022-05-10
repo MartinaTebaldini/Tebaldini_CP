@@ -17,7 +17,7 @@ uploaded_file = st.file_uploader("Please upload an Image file")
 if uploaded_file is not None:
     
     extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file)) #???????? how can i call the uploaded file in a general way?
-    st.header("Here is the text extracted from the image")
+    st.subheader("Here is the text extracted from the image")
     st.write(extractedInformation)
 
     translator = Translator()

@@ -2,7 +2,7 @@
 import streamlit as st
 from PIL import Image
 from googletrans import Translator
-#from gtts import gTTS
+from gtts import gTTS
 
 import pytesseract
 import shutil
@@ -34,5 +34,10 @@ if uploaded_file is not None:
         tra_text = translator.translate(extractedInformation, dest = tar_lang)
         st.write("here is the translation in", tar_lang)
         st.write(tra_text.text)
+        st.write("here is the pronunciation!", tra_text.pronunciation)
+        tts1=gTTS(tra_text.text, tar_lang)
+        tts1.save("lang.mp3")
+        audio_file = open("lang.mp3", "rb")
+        st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
 

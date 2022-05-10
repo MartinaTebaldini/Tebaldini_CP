@@ -9,6 +9,8 @@ import shutil
 import os
 import random
 
+urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg
+st.image(urlfoto)
 
 st.header("import an image and i will translate it for you!")
 uploaded_file = st.file_uploader("Please upload an Image file")

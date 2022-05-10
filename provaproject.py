@@ -15,7 +15,7 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
-if browser:
+if option == "browser":
      uploaded_file = st.file_uploader("Please upload an Image file")
 else:
      picture = st.camera_input("take a picture!")

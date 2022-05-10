@@ -18,5 +18,5 @@ st.write('You selected:', option)
 if browser:
      uploaded_file = st.file_uploader("Please upload an Image file")
 else:
-     picture = st.camera_input("take a picture!)
+     picture = st.camera_input("take a picture!")
   

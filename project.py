@@ -18,8 +18,8 @@ if uploaded_file is not None:
     st.write(extractedInformation)
 
     translator = Translator()
-    detectedLanguage = translator.detect(extractedInformation)
-    st.write(detectedLanguage) #to detect the language of the image
+    #detectedLanguage = translator.detect(extractedInformation)
+    #st.write(detectedLanguage) #to detect the language of the image
 
     st.write("here is a link with the language codes")
     url = "https://cloud.google.com/translate/docs/languages"

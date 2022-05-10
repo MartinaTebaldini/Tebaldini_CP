@@ -12,12 +12,12 @@ import random
 urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg"
 st.image(urlfoto)
 
-st.header("import an image and i will translate it for you!")
+st.header("Import an image and I will translate it for you!")
 uploaded_file = st.file_uploader("Please upload an Image file")
 if uploaded_file is not None:
     
     extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file)) #???????? how can i call the uploaded file in a general way?
-    st.write("here is the text extracted from the image")
+    st.write("Here is the text extracted from the image")
     st.write(extractedInformation)
 
     translator = Translator()

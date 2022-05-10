@@ -9,7 +9,7 @@ import shutil
 import os
 import random
 
-urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg
+urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg"
 st.image(urlfoto)
 
 st.header("import an image and i will translate it for you!")

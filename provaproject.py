@@ -3,7 +3,7 @@ from PIL import Image
 from googletrans import Translator
 from gtts import gTTS
 
-import pytesseract
+#import pytesseract
 import shutil
 import os
 import random

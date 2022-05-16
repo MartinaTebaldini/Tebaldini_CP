@@ -46,7 +46,7 @@ if picture is not None:
         st.subheader("here is the translation in", tar_lang)
         st.write(tra_text.text)
         st.subheader("here is the pronunciation!", tra_text.pronunciation)
-        tts1=gTTS(tra_text.text, tar_lang)
+        tts1=gTTS(tra_text.text, tar_lang, tld="com")
         tts1.save("lang.mp3")
         audio_file = open("lang.mp3", "rb")
         st.audio(data=audio_file, format="audio/mp3", start_time=0)

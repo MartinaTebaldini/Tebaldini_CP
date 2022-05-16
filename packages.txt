@@ -2,3 +2,4 @@ tesseract-ocr
 
 tesseract-ocr-ita
 tesseract-ocr-ara
+tesseract-ocr-jpn

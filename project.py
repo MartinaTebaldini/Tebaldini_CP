@@ -13,10 +13,21 @@ urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/
 st.image(urlfoto)
 
 st.title("Import an image and I will translate it for you!")
-uploaded_file = st.file_uploader("Please upload an Image file")
-if uploaded_file is not None:
+option = st.selectbox(
+     'how would you like to import your image?',
+     ('browser', 'camera'))
+
+st.write('You selected:', option)
+
+if option == "browser":
+     picture = st.file_uploader("Please upload an Image file")
+else:
+     picture = st.camera_input("take a picture!")
+  
+if picture is not None:
+
     
-    extractedInformation = pytesseract.image_to_string(Image.open(uploaded_file), lang='jpn+eng+hrv+ara') #???????? how can i call the uploaded file in a general way?
+    extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara') #???????? how can i call the uploaded file in a general way?
     st.subheader("Here is the text extracted from the image")
     st.write(extractedInformation)
 

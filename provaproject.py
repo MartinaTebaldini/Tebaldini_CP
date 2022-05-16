@@ -8,7 +8,6 @@ import shutil
 import os
 import random
 
-
 option = st.selectbox(
      'how would you like to import your image?',
      ('browser', 'camera'))

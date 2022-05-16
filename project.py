@@ -27,7 +27,7 @@ else:
 if picture is not None:
 
     
-    extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara') #???????? how can i call the uploaded file in a general way?
+    extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it') #???????? how can i call the uploaded file in a general way?
     st.subheader("Here is the text extracted from the image")
     st.write(extractedInformation)
 

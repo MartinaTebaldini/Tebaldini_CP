@@ -40,15 +40,19 @@ if picture is not None:
     st.write(url)
     tar_lang = st.text_input("in which language do you want to translate the text?")
     #st.write("you selected", tar_lang)
-
+     
     if tar_lang != "":
-        tra_text = translator.translate(extractedInformation, dest = tar_lang)
-        st.subheader("here is the translation in", tar_lang)
-        st.write(tra_text.text)
-        st.subheader("here is the pronunciation!", tra_text.pronunciation)
-        ttmp3=gTTS(tra_text.text, lang =tar_lang, tld="com")
-        ttmp3.save("lang.mp3")
-        audio_file = open("lang.mp3", "rb")
-        st.audio(data=audio_file, format="audio/mp3", start_time=0)
+     if tar_lang == detectedLanguage:
+          st.write("the language you selected is the same as the detected one! Pick another one")
+     else:
+          tra_text = translator.translate(extractedInformation, dest = tar_lang)
+          st.subheader("here is the translation in", tar_lang)
+          st.write(tra_text.text)
+          st.subheader("here is the pronunciation!", tra_text.pronunciation)
+          ttmp3=gTTS(tra_text.text, lang =tar_lang, tld="com")
+          ttmp3.save("lang.mp3")
+          audio_file = open("lang.mp3", "rb")
+          st.audio(data=audio_file, format="audio/mp3", start_time=0)
+          
 
 

@@ -8,6 +8,8 @@ import pytesseract
 import shutil
 import os
 import random
+[theme]
+base="dark"
 st.title("Import an image and I will translate it for you!")
 urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg"
 st.image(urlfoto)

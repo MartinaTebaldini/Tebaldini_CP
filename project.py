@@ -63,6 +63,7 @@ if picture is not None:
                st.write("""
                - for the language codes: https://cloud.google.com/translate/docs/languages
                - for the initial logo: google
+               - for streamlit documentation: https://docs.streamlit.io/
                """)          
            
           

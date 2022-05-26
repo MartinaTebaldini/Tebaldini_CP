@@ -14,6 +14,12 @@ urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/
 st.image(urlfoto)
 st.write("This app converts images into texts, more specifically it reads and recognises texts in images, it detects the language and then the text can be translated into the language of your choice. As output, it will give you both the texte and the audio")
 
+with st.expander("How to use"):
+     st.write("""
+         - Import an image
+         - Select the language you want translate the text into
+     """)
+
 
 option = st.selectbox(
      'how would you like to import your image? Please select either browser or camera',

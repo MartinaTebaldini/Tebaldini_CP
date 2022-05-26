@@ -33,20 +33,18 @@ else:
      picture = st.camera_input("take a picture!")
   
 if picture is not None:
+     extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it') #???????? how can i call the uploaded file in a general way?
+     st.markdown("**Here is the text extracted from the image**")
+     st.write(extractedInformation)
 
-    
-    extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it') #???????? how can i call the uploaded file in a general way?
-    st.markdown("**Here is the text extracted from the image**")
-    st.write(extractedInformation)
+     translator = Translator()
+     detectedLanguage = translator.detect(extractedInformation)
+     st.write(detectedLanguage) #to detect the language of the image
 
-    translator = Translator()
-    detectedLanguage = translator.detect(extractedInformation)
-    st.write(detectedLanguage) #to detect the language of the image
-
-    st.markdown("**here is a link with the language codes, please, pick one!**")
-    url = "https://cloud.google.com/translate/docs/languages"
-    st.write(url)
-    tar_lang = st.text_input("in which language do you want to translate the text?")
+     st.markdown("**here is a link with the language codes, please, pick one!**")
+     url = "https://cloud.google.com/translate/docs/languages"
+     st.write(url)
+     tar_lang = st.text_input("in which language do you want to translate the text?")
     #st.write("you selected", tar_lang)
      
     if tar_lang != "":

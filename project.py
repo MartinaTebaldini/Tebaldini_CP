@@ -12,7 +12,7 @@ import random
 st.title("Import an image and I will translate it for you!")
 urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg"
 st.image(urlfoto)
-st.write("This app converts images into texts, more specifically it reads and recognises texts in images, it detects the language and then the text can be translated into the language of the user's choice. As output, it will give both the text and the audio")
+st.write("This app converts images into texts, more specifically it reads and recognises texts in images, it detects the language and then the text can be translated into the language of the user's choice. As output, it will give both the translated text and audio")
 
 with st.expander("How to use"):
      st.write("""

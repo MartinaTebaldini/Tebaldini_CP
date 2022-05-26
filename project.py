@@ -15,10 +15,10 @@ st.write("This app converts images into texts, more specifically it reads and re
 
 
 option = st.selectbox(
-     'how would you like to import your image?',
+     'how would you like to import your image? Please select either browser or camera',
      ('browser', 'camera'))
 
-st.write('You selected:', option)
+#st.write('You selected:', option)
 
 if option == "browser":
      picture = st.file_uploader("Please upload an Image file")

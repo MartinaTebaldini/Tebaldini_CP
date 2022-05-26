@@ -59,8 +59,8 @@ if picture is not None:
                ttmp3.save("lang.mp3")
                audio_file = open("lang.mp3", "rb")
                st.audio(data=audio_file, format="audio/mp3", start_time=0)
-      with st.expander("See credits"):
-           st.write("""
+          with st.expander("See credits"):
+               st.write("""
                - for the language codes: https://cloud.google.com/translate/docs/languages
                - for the initial logo: google)
                """)          

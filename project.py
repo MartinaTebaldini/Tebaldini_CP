@@ -36,7 +36,7 @@ if picture is not None:
     detectedLanguage = translator.detect(extractedInformation)
     st.write(detectedLanguage) #to detect the language of the image
 
-    st.subheader("here is a link with the language codes, pick one!")
+    st.markdown("**here is a link with the language codes, pick one!**")
     url = "https://cloud.google.com/translate/docs/languages"
     st.write(url)
     tar_lang = st.text_input("in which language do you want to translate the text?")
@@ -47,9 +47,9 @@ if picture is not None:
           st.write("the language you selected is the same as the detected one! Pick another one")
      else:
           tra_text = translator.translate(extractedInformation, dest = tar_lang)
-          st.subheader("here is the translation in", tar_lang)
+          st.markdown("**here is the translation in**", tar_lang)
           st.write(tra_text.text)
-          st.subheader("here is the pronunciation!", tra_text.pronunciation)
+          st.markdown("**here is the pronunciation!**", tra_text.pronunciation)
           ttmp3=gTTS(tra_text.text, lang =tar_lang, tld="com")
           ttmp3.save("lang.mp3")
           audio_file = open("lang.mp3", "rb")

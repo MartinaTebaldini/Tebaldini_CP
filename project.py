@@ -62,7 +62,7 @@ if picture is not None:
           with st.expander("See credits"):
                st.write("""
                - for the language codes: https://cloud.google.com/translate/docs/languages
-               - for the initial logo: google)
+               - for the initial logo: google
                """)          
            
           

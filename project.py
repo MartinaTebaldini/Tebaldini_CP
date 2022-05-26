@@ -47,9 +47,9 @@ if picture is not None:
           st.write("the language you selected is the same as the detected one! Pick another one")
      else:
           tra_text = translator.translate(extractedInformation, dest = tar_lang)
-          st.markdown("**here is the translation in**", tar_lang)
+          st.write("here is the translation in", tar_lang)
           st.write(tra_text.text)
-          st.markdown("**here is the pronunciation!**", tra_text.pronunciation)
+          st.write("here is the pronunciation!", tra_text.pronunciation)
           ttmp3=gTTS(tra_text.text, lang =tar_lang, tld="com")
           ttmp3.save("lang.mp3")
           audio_file = open("lang.mp3", "rb")

@@ -48,9 +48,9 @@ if picture is not None:
     #st.write("you selected", tar_lang)
      
     if tar_lang != "":
-        if tar_lang == detectedLanguage:
+         if tar_lang == detectedLanguage:
                st.write("the language you selected is the same as the detected one! Pick another one")
-        else:
+         else:
           tra_text = translator.translate(extractedInformation, dest = tar_lang)
           st.write("here is the translation in", tar_lang)
           st.write(tra_text.text)

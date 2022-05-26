@@ -39,7 +39,7 @@ if picture is not None:
 
      translator = Translator()
      detectedLanguage = translator.detect(extractedInformation)
-     st.write(detectedLanguage[0]) #to detect the language of the image
+     st.write(detectedLanguage) #to detect the language of the image
 
      st.markdown("**here is a link with the language codes, please, pick one!**")
      url = "https://cloud.google.com/translate/docs/languages"

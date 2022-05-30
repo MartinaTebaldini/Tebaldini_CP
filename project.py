@@ -62,7 +62,7 @@ if picture is not None:
           with st.expander("See credits"):
                st.write("""
                - for the language codes: https://cloud.google.com/translate/docs/languages
-               - for the initial logo: https://www.inlinguaroma.com/quali-sono-le-lingue-piu-parlate-al-mondo/
+               - for the logo: https://www.inlinguaroma.com/quali-sono-le-lingue-piu-parlate-al-mondo/
                - for streamlit documentation: https://docs.streamlit.io/
                """)          
            

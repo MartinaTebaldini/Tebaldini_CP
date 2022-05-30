@@ -63,7 +63,6 @@ if picture is not None:
                st.write("""
                - for the language codes: https://cloud.google.com/translate/docs/languages
                - for the logo: https://www.inlinguaroma.com/quali-sono-le-lingue-piu-parlate-al-mondo/
-               - for streamlit documentation: https://docs.streamlit.io/
                """)          
            
           

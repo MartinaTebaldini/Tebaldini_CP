@@ -40,7 +40,7 @@ if picture is not None:
      translator = Translator()
      detectedLanguage = translator.detect(extractedInformation)
      if detectedLanguage is None:
-          st.write("-...")
+          st.write("I'm sorry, the language of the image has not been detected")
      else:
           
           st.write(detectedLanguage) #to detect the language of the image

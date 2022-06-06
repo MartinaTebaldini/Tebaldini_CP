@@ -33,7 +33,7 @@ else:
      picture = st.camera_input("take a picture!")
   
 if picture is not None:
-     extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it') 
+     extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it+fas') 
      st.markdown("**Here is the text extracted from the image**")
      st.write(extractedInformation)
 

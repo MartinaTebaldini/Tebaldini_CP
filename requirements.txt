@@ -3,3 +3,4 @@ gtts
 click<=8.0.4
 speechrecognition
 pytesseract
+gtts-cli --all

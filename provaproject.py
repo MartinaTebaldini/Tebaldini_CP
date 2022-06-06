@@ -38,7 +38,7 @@ if picture is not None:
 
      translator = Translator()
      detectedLanguage = translator.detect(extractedInformation)
-     if detectedLanguage is None:
+     if extractedInformation is None:
           st.write("I'm sorry, the language of the image has not been detected")
      else:
           st.write(detectedLanguage) #to detect the language of the image
@@ -49,7 +49,7 @@ if picture is not None:
           tar_lang = st.text_input("in which language do you want to translate the text?")
          #st.write("you selected", tar_lang)
 
-          if tar_lang is not None:
+          if tar_lang != "":
                if tar_lang == detectedLanguage:
                     st.write("the language you selected is the same as the detected one! Pick another one")
                else:

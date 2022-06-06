@@ -51,7 +51,7 @@ if picture is not None:
           tar_lang = st.text_input("in which language do you want to translate the text?")
          #st.write("you selected", tar_lang)
 
-          if tar_lang != " ":
+          if tar_lang != "":
                if tar_lang == detectedLanguage:
                     st.write("the language you selected is the same as the detected one! Pick another one")
                else:

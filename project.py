@@ -49,7 +49,7 @@ if picture is not None:
           st.markdown("**here is a link with the language codes, please, pick one!**")
           url = "https://cloud.google.com/translate/docs/languages"
           st.write(url)
-          tar_lang = st.text_input("in which language do you want to translate the text?")
+          tar_lang = st.text_input("in which language do you want to translate the text?", help="the audio may not be available for some languages; the translation is yet always given")
          #st.write("you selected", tar_lang)
 
           if tar_lang != "":

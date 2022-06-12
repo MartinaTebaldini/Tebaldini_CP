@@ -37,7 +37,7 @@ if picture is not None:
      extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it') 
      st.markdown("**Here is the text extracted from the image**")
      st.write(extractedInformation)
-     if extrectedInformation is None:
+     if extractedInformation is None:
           st.write("I'm sorry, the language of the image has not been detected")
      else:
           translator = Translator()

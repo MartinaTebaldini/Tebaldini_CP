@@ -37,40 +37,42 @@ if picture is not None:
      extractedInformation = pytesseract.image_to_string(Image.open(picture), lang='jpn+eng+hrv+ara+it') 
      st.markdown("**Here is the text extracted from the image**")
      st.write(extractedInformation)
-
-     translator = Translator()
-     detectedLanguage = translator.detect(extractedInformation)
-     if detectedLanguage is None:
+     if extrectedInformation is None:
           st.write("I'm sorry, the language of the image has not been detected")
      else:
-          
-          st.write(detectedLanguage) #to detect the language of the image
+          translator = Translator()
+          detectedLanguage = translator.detect(extractedInformation)
+          if detectedLanguage is None:
+               st.write("I'm sorry, the language of the image has not been detected")
+          else:
 
-          st.markdown("**here is a link with the language codes, please, choose one!**")
-          url = "https://cloud.google.com/translate/docs/languages"
-          st.write(url)
-          tar_lang = st.text_input("in which language do you want to translate the text?", help="the audio may not be available for some languages; the translation is yet always given")
-         #st.write("you selected", tar_lang)
+               st.write(detectedLanguage) #to detect the language of the image
 
-          if tar_lang != "":
-               if tar_lang == detectedLanguage:
-                    st.write("the language you selected is the same as the detected one! Pick another one")
-               else:
-                    tra_text = translator.translate(extractedInformation, dest = tar_lang)
-                    st.write("here is the translation in", tar_lang)
-                    st.write(tra_text.text)
-                    st.write("here is the pronunciation!", tra_text.pronunciation)
-                    ttmp3=gTTS(tra_text.text, lang =tar_lang, tld="com")
-                    ttmp3.save("lang.mp3")
-                    audio_file = open("lang.mp3", "rb")
-                    st.audio(data=audio_file, format="audio/mp3", start_time=0)
-               with st.expander("See credits"):
-                    st.write("""
-                    - for the language codes: https://cloud.google.com/translate/docs/languages
-                    - for the logo: https://www.inlinguaroma.com/quali-sono-le-lingue-piu-parlate-al-mondo/
-                    - imported image (for the video): https://www.imago-images.de/fotos-bilder/achtung-lebensgefahr-schild
-                    """)          
+               st.markdown("**here is a link with the language codes, please, choose one!**")
+               url = "https://cloud.google.com/translate/docs/languages"
+               st.write(url)
+               tar_lang = st.text_input("in which language do you want to translate the text?", help="the audio may not be available for some languages; the translation is yet always given")
+              #st.write("you selected", tar_lang)
 
-          
+               if tar_lang != "":
+                    if tar_lang == detectedLanguage:
+                         st.write("the language you selected is the same as the detected one! Pick another one")
+                    else:
+                         tra_text = translator.translate(extractedInformation, dest = tar_lang)
+                         st.write("here is the translation in", tar_lang)
+                         st.write(tra_text.text)
+                         st.write("here is the pronunciation!", tra_text.pronunciation)
+                         ttmp3=gTTS(tra_text.text, lang =tar_lang, tld="com")
+                         ttmp3.save("lang.mp3")
+                         audio_file = open("lang.mp3", "rb")
+                         st.audio(data=audio_file, format="audio/mp3", start_time=0)
+                    with st.expander("See credits"):
+                         st.write("""
+                         - for the language codes: https://cloud.google.com/translate/docs/languages
+                         - for the logo: https://www.inlinguaroma.com/quali-sono-le-lingue-piu-parlate-al-mondo/
+                         - imported image (for the video): https://www.imago-images.de/fotos-bilder/achtung-lebensgefahr-schild
+                         """)          
+
+
 
 

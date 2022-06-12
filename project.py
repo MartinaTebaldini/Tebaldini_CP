@@ -18,7 +18,7 @@ st.write("This app converts images into texts, more specifically it reads and re
 with st.expander("How to use"):
      st.write("""
          - Import an image
-         - Select the language you want translate the text into
+         - Select the language in which you wish to translate the text
      """)
 
 
@@ -46,7 +46,7 @@ if picture is not None:
           
           st.write(detectedLanguage) #to detect the language of the image
 
-          st.markdown("**here is a link with the language codes, please, pick one!**")
+          st.markdown("**here is a link with the language codes, please, choose one!**")
           url = "https://cloud.google.com/translate/docs/languages"
           st.write(url)
           tar_lang = st.text_input("in which language do you want to translate the text?", help="the audio may not be available for some languages; the translation is yet always given")

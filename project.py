@@ -10,7 +10,7 @@ import os
 import random
 
 st.title("Image Translator")
-urlfoto2= "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/welcome.png
+urlfoto2= "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/welcome.jpg"
 urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg"
 st.image(urlfoto, width=600)
 st.image(urlfoto2, width=600)

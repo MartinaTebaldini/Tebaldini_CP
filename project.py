@@ -10,8 +10,10 @@ import os
 import random
 
 st.title("Image Translator")
+urlfoto2= "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/welcome.png
 urlfoto = "https://raw.githubusercontent.com/MartinaTebaldini/Tebaldini_CP/main/lingue-straniere.jpg"
 st.image(urlfoto, width=600)
+st.image(urlfoto2, width=600)
 st.markdown("**Import an image and I will translate it for you!**")
 st.write("This app converts images into texts, more specifically it reads and recognises texts in images, it detects the language and then the text can be translated into the language of the user's choice. As output, it will give both the translated text and audio")
 

@@ -68,6 +68,7 @@ if picture is not None:
                     st.write("""
                     - for the language codes: https://cloud.google.com/translate/docs/languages
                     - for the logo: https://www.inlinguaroma.com/quali-sono-le-lingue-piu-parlate-al-mondo/
+                    - imported image (for the video): https://www.imago-images.de/fotos-bilder/achtung-lebensgefahr-schild
                     """)          
 
           
